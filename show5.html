@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>七级度分析</title>
+    <link rel="stylesheet" href="js/bstable/css/bootstrap.min.css">
+    <link rel="stylesheet" href="js/bstable/css/bootstrap-table.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link href="css/zTreeStyle/zTreeStyle.css" rel="stylesheet" type="text/css" />
+    <!-- <link rel="stylesheet" href="css/styles.css"> -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="author" content="Made with ❤ by Jorge Epuñan - @csslab">
+  
+    <title>jQuery Timeline 0.9.54 - Dando vida al tiempo</title>
+    <link rel="stylesheet" href="css/styles.css" media="screen" />
+  
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery.timelinr-0.9.54.js"></script>
+    <script>
+      $(function(){
+                  $().timelinr({
+                      arrowKeys: 'true'
+                  })
+              });
+    </script>
+</head>
+<style>
+
+</style>
+<body>
+<!--顶部-->
+<header class="header left">
+    <div class="left nav">
+        <ul>
+            <li><i class="nav_1"></i><a href="index.html"></a> </li>
+            <li><i class="nav_2"></i><a href="carContrl.html"></a> </li>
+            <li><i class="nav_3"></i><a href="map.html"></a> </li>
+        </ul>
+    </div>
+    <div class="header_center left">
+        <h2><strong>经营伴侣-满意度晴雨表</strong></h2>
+        <p class="color_font"><small>Comprehensive service platform for smart tourism</small></p>
+    </div>
+    <div class="right nav text_right">
+        <ul> <li><i class="nav_7"></i><a href="static.html">维度分析</a> </li>
+            <li class="nav_active"><i class="nav_4"></i><a href="index.html">七级度分析</a> </li>
+            <li><i class="nav_8"></i><a href="message.html">数据录入</a> </li>
+        </ul>
+    </div>
+</header>
+
+<div class="clear"></div>
+
+<!--内容部分-->
+<div class="con left">
+
+    <!-- 选择时间-->
+    <div class="static_top left">
+        <i></i><span>统计概况</span>
+    </div>
+
+    <!--数据总概-->
+    <div class="stiatic_top_con left">
+        <table>
+            <tr>
+                <td class="labe_td">总概：</td>
+                <td colspan="3" class="sky">新增小红书平台图文评论共3267条！</td>
+            </tr>
+        </table>
+    </div>
+
+    <!--统计分析图-->
+    <!-- <div class="static_top left">
+        <i></i><span>统计分析一</span>
+    </div> -->
+
+    <div class="div_any">
+        <div class="static_top left">
+            <i></i><span>统计分析一</span>
+        </div>
+
+        <div class="right div_any03">
+
+            <div class="div_any_child01 left div_any_child01_wh">
+                <div class="div_any_title"><img src="img/title_5.png">七级度分析 </div>
+                <p id="char5" class="p_chart">
+                  
+                </p>
+
+                <div class="navshow">
+                  <ul> 
+                      <!-- <li><a href="static.html">维度分析</a> </li> -->
+                      <li><i class="nav_7"></i><a href="show1.html">很满意</a> </li>
+                      <li><i class="nav_7"></i><a href="show2.html">满意</a> </li>
+                      <li><i class="nav_7"></i><a href="show3.html">较满意</a> </li>
+                      <li><i class="nav_7"></i><a href="show4.html">一般</a> </li>
+                      <li><i class="nav_7"></i><a href="show5.html">不太满意</a> </li>
+                      <li><i class="nav_7"></i><a href="show6.html">不满意</a> </li>
+                      <li><i class="nav_7"></i><a href="index.html">很不满意</a> </li>
+                  </ul>
+                </div>
+
+                <div id="timeline">
+                  <ul id="dates">
+                    <li><a href="#li_0_c" id = "li_0"></a></li>
+                    <li><a href="#li_1_c" id = "li_1"></a></li>
+                    <li><a href="#li_2_c" id = "li_2"></a></li>
+                    <li><a href="#li_3_c" id = "li_3"></a></li>
+                    <li><a href="#li_4_c" id = "li_4"></a></li>
+                    <li><a href="#li_5_c" id = "li_5"></a></li>
+                    <li><a href="#li_6_c" id = "li_6"></a></li>
+                    <li><a href="#li_7_c" id = "li_7"></a></li>
+                    <li><a href="#li_8_c" id = "li_8"></a></li>
+                  </ul>
+                  <ul id="issues">
+                    <li id="li_0_c"></li>
+                    <li id="li_1_c"></li>
+                    <li id="li_2_c"></li>
+                    <li id="li_3_c"></li>
+                    <li id="li_4_c"></li>
+                    <li id="li_5_c"></li>
+                    <li id="li_6_c"></li>
+                    <li id="li_7_c"></li>
+                    <li id="li_8_c"></li>
+                  </ul>
+                  <div id="grad_left"></div>
+                  <div id="grad_right"></div>
+                  <a href="#" id="next">+</a>
+                  <a href="#" id="prev">-</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery/jQuery-2.2.0.min.js"></script>
+<script src="js/echarts-all.js"></script>
+<script src="js/base.js"></script>
+<script src="js/table1.js"></script>
+<script src="js/script.js"></script>
+<script>
+  /*function convertTimestampToDate(timestamp) {
+    var date = new Date(timestamp);
+    var month = ("0" + (date.getMonth() + 1)).slice(-2); // getMonth()返回的月份是从0开始的，所以需要+1
+    var day = ("0" + date.getDate()).slice(-2); // 如果日期是个位数，前面补0
+    return  month + "." + day;
+  }*/
+  $(document).ready(function(){
+    $.ajax({
+      url: "http://localhost:8080/seven/getTagList",
+      type: "GET",
+      success: function(tag_data){
+        console.log("请求成功", tag_data)
+        char5(tag_data.data.data)
+      },
+      error: function(jqXHR, textStatus, errorThrown) {
+        console.error("请求失败:", textStatus, errorThrown);
+      }
+    });
+  
+    $.ajax({
+        url: "http://localhost:8080/seven/getClassList",
+        type: "GET",
+        success: function(class_data) {
+            console.log("请求成功", class_data);
+            cls = class_data.data.cls;
+            for (var i = 0; i < cls.length; i++) {
+                var li_id = 'li_' + i;
+                var cls_ = cls[i];
+                var element = document.getElementById(li_id);
+                if (element){
+                    element.innerText = cls_;
+                } else {
+                    console.error('Element with ID "' + li_id + '" not found.');
+                }
+            }
+            getSeven(cls[0], "li_0_c");
+            var lis = document.querySelectorAll('#dates li');
+            // 为每个li元素添加点击事件监听器
+            lis.forEach(function(li) {
+                li.addEventListener('click', function(event) {
+                    event.preventDefault(); // 阻止链接的默认跳转行为
+                    var clickedLiId = event.target.id; // 获取被点击的li元素的id
+                    getSeven(cls[clickedLiId[3]], clickedLiId+"_c")
+                    // 在这里可以添加更多基于被选li的操作
+                });
+            });
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.error("请求失败:", textStatus, errorThrown);
+        }
+    });
+  });
+  
+
+  /*var dateData;
+  $(document).ready(function(){
+    $.ajax({
+      url: "http://localhost:8080/seven/getDateList?pageNum=6&pageOff=0",
+      type: "GET",
+      success: function(date_data){
+        console.log("请求成功", date_data)
+        dateData = date_data;
+        for(var i = 0; i < date_data.data.data.length; i++){
+          var li_id = 'li_' + i;
+          var date = convertTimestampToDate(date_data.data.data[i])
+          document.getElementById(li_id).innerText = date;
+        }
+        getSeven(date_data.data.data[0], "li_0_c");
+      },
+      error: function(jqXHR, textStatus, errorThrown) {
+        console.error("请求失败:", textStatus, errorThrown);
+      }
+    });
+  });*/
+
+  
+  /*$(document).ready(function(){
+    
+  });*/
+
+  /*function getSeven(timeStamp, li_id){
+    $.ajax({
+      url: "http://localhost:8080/seven/getSevenByTime?timeStamp="+timeStamp+"&tag=0",
+      type: "GET",
+      success: function(seven_data){
+        console.log("请求成功", seven_data)
+        const liList = document.getElementById(li_id);
+        liList.innerHTML = '';
+        seven_data.data.seven.forEach(seven => {
+          const reviewDiv = createReviewDiv(seven);
+          liList.appendChild(reviewDiv);
+        });
+      },
+      error: function(jqXHR, textStatus, errorThrown) {
+        console.error("请求失败:", textStatus, errorThrown);
+      }
+    });
+  }*/
+
+  function getSeven(cls_seven, li_id){
+    $.ajax({
+      url: "http://localhost:8080/seven/getSevenByClass?cls="+cls_seven+"&tag=2",
+      type: "GET",
+      success: function(seven_data){
+        console.log("请求成功", seven_data)
+        const liList = document.getElementById(li_id);
+        liList.innerHTML = '';
+        seven_data.data.seven.forEach(seven => {
+          const reviewDiv = createReviewDiv(seven);
+          liList.appendChild(reviewDiv);
+        });
+      },
+      error: function(jqXHR, textStatus, errorThrown) {
+        console.error("请求失败:", textStatus, errorThrown);
+      }
+    });
+  }
+
+  function createReviewDiv(seven) {
+    const template = `
+      <div class="right div_any02">
+        <img src=${seven.img} alt="User Image">
+        <br>
+        <p>"${seven.name}":${seven.comment}</p>
+      </div>
+    `;
+    const div = document.createElement('div');
+    div.innerHTML = template;
+    return div;
+  }
+
+  /*var lis = document.querySelectorAll('#dates li');
+  // 为每个li元素添加点击事件监听器
+  lis.forEach(function(li) {
+      li.addEventListener('click', function(event) {
+          event.preventDefault(); // 阻止链接的默认跳转行为
+          var clickedLiId = event.target.id; // 获取被点击的li元素的id
+          console.log(clickedLiId)
+          getSeven(cls.data.cls[clickedLiId[3]], clickedLiId+"_c")
+          // 在这里可以添加更多基于被选li的操作
+      });
+  });*/
+</script>
+</body>
+</html>

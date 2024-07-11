@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据上传</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/tail.css">
+</head>
+<body class="body1">
+<!--顶部-->
+<header class="header left">
+    <div class="left nav">
+        <ul>
+            <li><i class="nav_1"></i></li>
+            <li><i class="nav_2"></i></li>
+            <li><i class="nav_3"></i></li>
+        </ul>
+    </div>
+    <div class="header_center left">
+        <h2><strong>经营伴侣-满意度晴雨表</strong></h2>
+        <p class="color_font"><small>Comprehensive service platform for smart tourism</small></p>
+    </div>
+    <div class="right nav text_right">
+        <ul>
+            <li><i class="nav_7"></i><a href="static.html">维度分析</a></li>
+            <li><i class="nav_4"></i><a href="table1.html">七级度分析</a></li>
+            <li class="nav_active"><i class="nav_8"></i><a href="message.html">数据录入</a></li>
+        </ul>
+    </div>
+</header>
+<section class="sm_section">
+    <form id="uploadForm" enctype="multipart/form-data" method="POST">
+        <fieldset class="message_fieldset">
+            <legend>数据导入</legend>
+            <div class="message_con">
+                <label>数据表名：</label>
+                <span class="must">*</span>
+                <select id="tableName" class="message_select" name="tableName">
+                    <option value="seven">七级度分析</option>
+                    <option value="quality">景区服务</option>
+                    <option value="loyalty">解决问题能力</option>
+                    <option value="participation">客户参与度</option>
+                    <option value="price">品牌形象</option>
+                    <option value="feedback">客户反馈</option>
+                    <option value="expectations">社会责任</option>
+                </select>
+            </div>
+            <div class="message_con inputfile_div">  
+                <label>文件上传：</label>
+                <span class="must">*</span>
+                <input type="file" class="message_input input_file" id="excelFile" name="excelFile" accept=".xls,.xlsx" onchange="displayFileName()" style="display:none">
+                <input type="text" class="file_path_input" id="filePath" readonly>
+                <button type="button" class="button" onclick="document.getElementById('excelFile').click()">选择文件</button>
+            </div>
+        </fieldset>
+        <div class="message_footer">
+            <button type="submit" class="bule">保存</button>
+            <button type="button" class="orgen">取消</button>
+        </div>
+    </form>
+</section>
+<script src="js/jquery/jQuery-2.2.0.min.js"></script>
+<script src="js/utf8-php/ueditor.config.js"></script>
+<script src="js/utf8-php/ueditor.all.min.js"></script>
+<script src="js/base.js"></script>
+<script>
+    function displayFileName() {
+        var fileInput = document.getElementById('excelFile');
+        var filePathInput = document.getElementById('filePath');
+        filePathInput.value = fileInput.value;
+        console.log(filePathInput.value);
+    }
+
+    $('#uploadForm').submit(function(event) {
+        event.preventDefault();
+        var formData = new FormData();
+        formData.append('excelFile', $('#excelFile')[0].files[0]);
+        formData.append('tableName', $('#tableName').val());
+        $.ajax({
+            url: 'http://localhost:8080/upload/uploadExcel',
+            type: 'POST',
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function(response) {
+                // 处理成功响应
+                alert(response.message);
+            },
+            error: function(xhr, status, error) {
+                // 处理错误响应
+                alert(xhr.responseText.message);
+            }
+        });
+    });
+</script>
+</body>
+</html>
